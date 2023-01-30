@@ -1,7 +1,8 @@
-FILEPATH = "tasks.txt"
+TODO_FILEPATH = "tasks.txt"
+SHOPPING_FILEPATH = "shopping.txt"
 
 
-def get_list_from_file(filepath=FILEPATH):
+def get_list_from_file(filepath):
     """
     Read a file at a specified file path and store each line as a list item
     :param filepath: the path of the file to read
@@ -12,7 +13,7 @@ def get_list_from_file(filepath=FILEPATH):
     return flist
 
 
-def write_list_to_file(flist, filepath=FILEPATH):
+def write_list_to_file(flist, filepath):
     """
     Writes a specified list of items to a specified file path (1 item per line)
     :param flist: the list to write to the file
@@ -43,4 +44,4 @@ def slice_numbered_string(string, delimiter='.'):
 
 
 if __name__ == "__main__":
-    print(get_list_from_file())
+    print(get_list_from_file(TODO_FILEPATH))
