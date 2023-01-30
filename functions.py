@@ -10,7 +10,11 @@ def get_list_from_file(filepath):
     """
     with open(filepath) as list_file:
         flist = list_file.readlines()
-    return flist
+        new_list = []
+        for item in flist:
+            if item.strip() != "":
+                new_list.append(item)
+    return new_list
 
 
 def write_list_to_file(flist, filepath):
